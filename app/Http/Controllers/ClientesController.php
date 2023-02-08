@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\ClientesRepository;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class ClientesController extends Controller
 {
@@ -22,6 +23,11 @@ class ClientesController extends Controller
     public function listarClientesById($id)
     {
         return $this->clientesRepository->listarClientesById($id);
+    }
+
+    public function cadastrarCliente(Request $request)
+    {
+        return $this->clientesRepository->cadastrarCliente($request);
     }
 
     public function deletarCliente($id)
