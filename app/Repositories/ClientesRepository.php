@@ -14,7 +14,9 @@ class ClientesRepository{
 
     public function listarClientes()
     {
-        $clientes = Clientes::with('endereco')->get();
+        $clientes = Clientes::with('endereco')
+        ->paginate(10);
+
         return $clientes;
     }
 
@@ -23,6 +25,7 @@ class ClientesRepository{
         $clientes = Clientes::with('endereco')
         ->where('id', $id)
         ->get();
+
         return $clientes;
     }
 
