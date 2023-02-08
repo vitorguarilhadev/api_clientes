@@ -17,5 +17,6 @@ use App\Http\Controllers\ClientesController;
 Route::get('/listarClientes', [ClientesController::class, 'listarClientes']);
 Route::get('/listarClientes/{id}', [ClientesController::class, 'listarClientesById']);
 Route::delete('/deletarCliente/{id}', [ClientesController::class, 'deletarCliente']);
+Route::post('/cadastrarCliente', [ClientesController::class, 'cadastrarCliente']);
 
 
