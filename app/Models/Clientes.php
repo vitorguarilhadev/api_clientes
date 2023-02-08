@@ -14,7 +14,7 @@ class Clientes extends Model
     protected $fillable = [
         'foto',
         'nome',
-        'nome_mãe',
+        'nome_mae',
         'data_nascimento',
         'cpf',
         'cns',
