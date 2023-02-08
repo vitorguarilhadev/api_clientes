@@ -17,13 +17,12 @@ class Clientes extends Model
         'nome_mae',
         'data_nascimento',
         'cpf',
-        'cns',
-        'endereco_id'
+        'cns'
     ];
 
     public function endereco()
     {
-        return $this->hasOne('App\Models\Enderecos','id','endereco_id');
+        return $this->hasMany('App\Models\Enderecos','cliente_id','id');
     }
 
 }

@@ -18,7 +18,8 @@ class Enderecos extends Model
         'complemento',
         'bairro',
         'cidade',
-        'estado'
+        'estado',
+        'cliente_id'
     ];
 
 }
