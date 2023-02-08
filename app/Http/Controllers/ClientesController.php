@@ -30,6 +30,11 @@ class ClientesController extends Controller
         return $this->clientesRepository->cadastrarCliente($request);
     }
 
+    public function editarCliente(Request $request)
+    {
+        return $this->clientesRepository->editarCliente($request);
+    }
+
     public function deletarCliente($id)
     {
         return $this->clientesRepository->deletarCliente($id);
